@@ -1,0 +1,1581 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMKN 1 BANDAR - OSIS Official Website</title>
+    <meta name="description" content="Website resmi OSIS SMKN 1 BANDAR - Wadah kreativitas dan pengembangan diri siswa">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        :root {
+            --primary: #0a2463;
+            --secondary: #1e3a8a;
+            --accent: #3b82f6;
+            --light: #dbeafe;
+            --teal: #2dd4bf;
+            --purple: #8b5cf6;
+            --deep-blue: #1e3a8a;
+            --deep-teal: #0d9488;
+            --deep-purple: #7c3aed;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            color: #1e293b;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 50%, var(--accent) 100%);
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 4px 20px rgba(11, 36, 99, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--teal), var(--purple), var(--accent));
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo-icon {
+            background: rgba(255, 255, 255, 0.2);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 12px;
+            backdrop-filter: blur(5px);
+        }
+        
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .logo h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        
+        .domain {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            margin-top: 2px;
+        }
+        
+        .search-box {
+            display: flex;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 50px;
+            padding: 5px;
+            backdrop-filter: blur(5px);
+        }
+        
+        .search-box input {
+            padding: 10px 15px;
+            border: none;
+            background: transparent;
+            color: white;
+            width: 250px;
+            outline: none;
+        }
+        
+        .search-box input::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        .search-box button {
+            padding: 10px 15px;
+            background: var(--teal);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .search-box button:hover {
+            background: var(--purple);
+            transform: scale(1.05);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            margin-top: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        nav li {
+            margin: 0 0.5rem;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 10px 18px;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.95rem;
+            white-space: nowrap;
+        }
+        
+        nav a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+        
+        nav a:hover::before {
+            left: 100%;
+        }
+        
+        nav a:hover {
+            background: rgba(255,255,255,0.15);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transform: translateY(-2px);
+        }
+        
+        nav a i {
+            font-size: 1.1rem;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, rgba(10, 36, 99, 0.85) 0%, rgba(30, 58, 138, 0.8) 50%, rgba(59, 130, 246, 0.7) 100%), url('https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1926&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+        
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            position: relative;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            position: relative;
+        }
+        
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+            position: relative;
+        }
+        
+        .stat-item {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 1.5rem;
+            border-radius: 16px;
+            text-align: center;
+            margin: 0.5rem;
+            min-width: 150px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .stat-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(90deg, var(--teal), var(--purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .content {
+            padding: 4rem 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--primary);
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--teal), var(--purple));
+            border-radius: 2px;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .feature-card {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(11, 36, 99, 0.08);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(219, 234, 254, 0.8);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--teal), var(--purple), var(--accent));
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(11, 36, 99, 0.15);
+        }
+        
+        .feature-card h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--light);
+            font-size: 1.4rem;
+        }
+        
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--teal), var(--accent));
+            color: white;
+            font-size: 1.5rem;
+        }
+        
+        footer {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 3rem 0 1.5rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--teal), var(--purple), var(--accent));
+        }
+        
+        .social-media {
+            margin: 1.5rem 0;
+        }
+        
+        .social-media a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            margin: 0 10px;
+            border-radius: 50%;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(5px);
+        }
+        
+        .social-media a:hover {
+            background: var(--teal);
+            transform: translateY(-5px);
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+            gap: 15px;
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-size: 0.9rem;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        /* Halaman Konten */
+        .page-content {
+            display: none;
+            padding: 2rem 0;
+        }
+        
+        .page-active {
+            display: block;
+        }
+        
+        .page-title {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--primary);
+        }
+        
+        .page-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .page-card {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(11, 36, 99, 0.08);
+            border: 1px solid rgba(219, 234, 254, 0.8);
+            transition: all 0.3s ease;
+        }
+        
+        .page-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(11, 36, 99, 0.15);
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .gallery-item {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            position: relative;
+        }
+        
+        .gallery-item:hover {
+            transform: scale(1.03);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(10, 36, 99, 0.9), transparent);
+            color: white;
+            padding: 1rem;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover .gallery-overlay {
+            transform: translateY(0);
+        }
+        
+        .gallery-icon {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(255, 255, 255, 0.9);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--deep-blue);
+            font-size: 1.2rem;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+        }
+        
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .contact-card {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(11, 36, 99, 0.08);
+            text-align: center;
+        }
+        
+        .contact-icon {
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+        
+        .structure-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .structure-card {
+            background: white;
+            border-radius: 16px;
+            padding: 1.5rem;
+            box-shadow: 0 10px 30px rgba(11, 36, 99, 0.08);
+            border: 1px solid rgba(219, 234, 254, 0.8);
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+        
+        .structure-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(11, 36, 99, 0.15);
+        }
+        
+        .structure-icon {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 1.8rem;
+            color: white;
+        }
+        
+        .ketua { background: linear-gradient(135deg, var(--deep-blue), var(--accent)); }
+        .wakil { background: linear-gradient(135deg, var(--deep-teal), var(--teal)); }
+        .bendahara { background: linear-gradient(135deg, var(--deep-purple), var(--purple)); }
+        .sekretaris { background: linear-gradient(135deg, #0ea5e9, #38bdf8); }
+        .dokumentasi { background: linear-gradient(135deg, #f59e0b, #fbbf24); }
+        .olahraga { background: linear-gradient(135deg, #ef4444, #f87171); }
+        .kesehatan { background: linear-gradient(135deg, #10b981, #34d399); }
+        .kebersihan { background: linear-gradient(135deg, #84cc16, #a3e635); }
+        .kerapian { background: linear-gradient(135deg, #6366f1, #818cf8); }
+        .kreatif { background: linear-gradient(135deg, #ec4899, #f472b6); }
+        .keagamaan { background: linear-gradient(135deg, #8b5cf6, #a78bfa); }
+        .keamanan { background: linear-gradient(135deg, #64748b, #94a3b8); }
+        
+        /* Kotak Saran */
+        .saran-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(11, 36, 99, 0.08);
+            border: 1px solid rgba(219, 234, 254, 0.8);
+        }
+        
+        .saran-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        
+        .form-group label {
+            font-weight: 600;
+            color: var(--primary);
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            padding: 12px 15px;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            background: white;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+        
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .btn-submit {
+            background: linear-gradient(135deg, var(--teal), var(--accent));
+            color: white;
+            border: none;
+            padding: 14px 20px;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        
+        .btn-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .btn-submit:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        .success-message {
+            background: linear-gradient(135deg, #10b981, #34d399);
+            color: white;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            margin-top: 1rem;
+            display: none;
+        }
+        
+        .saran-list {
+            margin-top: 3rem;
+        }
+        
+        .saran-item {
+            background: #f8fafc;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            border-left: 4px solid var(--accent);
+        }
+        
+        .saran-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .saran-nama {
+            font-weight: 600;
+            color: var(--primary);
+        }
+        
+        .saran-kategori {
+            background: var(--light);
+            color: var(--primary);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        
+        .saran-tanggal {
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+        
+        .saran-isi {
+            color: #475569;
+            line-height: 1.5;
+        }
+        
+        .empty-state {
+            text-align: center;
+            padding: 3rem;
+            color: #64748b;
+        }
+        
+        .empty-state i {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #cbd5e1;
+        }
+        
+        /* Admin Panel */
+        .admin-actions {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .admin-actions .btn-submit {
+            margin: 0;
+        }
+        
+        .saran-item.admin {
+            position: relative;
+            border-left: 4px solid #ef4444;
+        }
+        
+        .delete-btn {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: #ef4444;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 5px 10px;
+            cursor: pointer;
+            font-size: 0.8rem;
+        }
+        
+        .delete-btn:hover {
+            background: #dc2626;
+        }
+        
+        .saran-email {
+            color: #64748b;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .header-top {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .search-box {
+                margin-top: 1rem;
+                width: 100%;
+            }
+            
+            .search-box input {
+                width: 100%;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+            
+            nav li {
+                margin: 0;
+                width: 100%;
+                text-align: center;
+            }
+            
+            nav a {
+                justify-content: center;
+                width: 100%;
+                max-width: 250px;
+            }
+            
+            .stats {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .stat-item {
+                width: 80%;
+            }
+            
+            .hero h2 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .saran-container {
+                padding: 1.5rem;
+            }
+            
+            .saran-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .admin-actions {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-top">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="logo-text">
+                        <h1>SMKN 1 BANDAR</h1>
+                        <div class="domain">OSISSMKN1BANDAR.COM</div>
+                    </div>
+                </div>
+                <div class="search-box">
+                    <input type="text" placeholder="Cari informasi...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="nav-link" data-page="beranda"><i class="fas fa-home"></i> Beranda</a></li>
+                    <li><a href="#" class="nav-link" data-page="struktur"><i class="fas fa-sitemap"></i> Struktur</a></li>
+                    <li><a href="#" class="nav-link" data-page="program-kerja"><i class="fas fa-tasks"></i> Program Kerja</a></li>
+                    <li><a href="#" class="nav-link" data-page="galeri"><i class="fas fa-images"></i> Galeri Kegiatan</a></li>
+                    <li><a href="#" class="nav-link" data-page="kotak-saran"><i class="fas fa-comment-dots"></i> Kotak Saran</a></li>
+                    <li><a href="#" class="nav-link" data-page="kontak"><i class="fas fa-envelope"></i> Kontak</a></li>
+                    <li><a href="#" class="nav-link" data-page="sosial-media"><i class="fas fa-share-alt"></i> Sosial Media</a></li>
+                    <li><a href="#" class="nav-link" data-page="admin-saran"><i class="fas fa-cog"></i> Admin</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Halaman Beranda -->
+    <section id="beranda" class="page-content page-active">
+        <div class="hero">
+            <div class="container">
+                <h2>Selamat Datang di OSIS SMKN 1 BANDAR</h2>
+                <p>Website resmi Organisasi Siswa Intra Sekolah SMKN 1 BANDAR - Wadah kreativitas, inovasi, dan pengembangan diri siswa.</p>
+                
+                <div class="stats">
+                    <div class="stat-item">
+                        <div class="stat-number">14</div>
+                        <div>Pengurus OSIS</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">8</div>
+                        <div>Program Kerja</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">12</div>
+                        <div>Ekstrakurikuler</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">850+</div>
+                        <div>Siswa Terlibat</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="content">
+            <div class="container">
+                <h2 class="section-title">Visi & Misi OSIS</h2>
+                
+                <div class="features">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h3>Visi OSIS</h3>
+                        <p>Menjadi organisasi siswa yang unggul, kreatif, dan berkarakter, mampu menjadi wadah pengembangan potensi diri serta turut serta dalam memajukan SMKN 1 BANDAR.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h3>Misi OSIS</h3>
+                        <p>1. Meningkatkan kualitas akademik dan non-akademik siswa<br>
+                           2. Mengembangkan bakat dan minat siswa<br>
+                           3. Membangun karakter kepemimpinan<br>
+                           4. Menjalin hubungan baik dengan seluruh warga sekolah</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3>Nilai Inti</h3>
+                        <p>Kreativitas, Integritas, Kolaborasi, Inovasi, dan Kepedulian menjadi landasan setiap kegiatan OSIS SMKN 1 BANDAR.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Halaman Struktur -->
+    <section id="struktur" class="page-content">
+        <div class="container">
+            <h2 class="page-title">Struktur OSIS SMKN 1 BANDAR</h2>
+            <div class="structure-grid">
+                <div class="structure-card">
+                    <div class="structure-icon ketua">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                    <h3>Ketua OSIS</h3>
+                    <p>M. Rizki Pratama</p>
+                    <p>Memimpin dan mengkoordinasikan seluruh kegiatan OSIS</p>
+                </div>
+                <div class="structure-card">
+                    <div class="structure-icon wakil">
+                        <i class="fas fa-user-friends"></i>
+                    </div>
+                    <h3>Wakil Ketua OSIS</h3>
+                    <p>Sarah Indah Lestari</p>
+                    <p>Membantu ketua dalam mengkoordinasikan kegiatan OSIS</p>
+                </div>
+                <div class="structure-card">
+                    <div class="structure-icon bendahara">
+                        <i class="fas fa-money-bill-wave"></i>
+                    </div>
+                    <h3>Bendahara 1</h3>
+                    <p>Dewi Sartika</p>
+                    <p>Mengelola keuangan OSIS dengan transparan</p>
+                </div>
+                <div class="structure-card">
+                    <div class="structure-icon bendahara">
+                        <i class="fas fa-coins"></i>
+                    </div>
+                    <h3>Bendahara 2</h3>
+                    <p>Rizky Maulana</p>
+                    <p>Membantu mengelola keuangan OSIS</p>
+                </div>
+                <div class="structure-card">
+                    <div class="structure-icon sekretaris">
+                        <i class="fas fa-pen-fancy"></i>
+                    </div>
+                    <h3>Sekretaris 1</h3>
+                    <p>Anisa Fitriani</p>
+                    <p>Mengurus administrasi dan dokumentasi rapat</p>
+                </div>
+                <div class="structure-card">
+                    <div class="structure-icon sekretaris">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3>Sekretaris 2</h3>
+                    <p>Fajar Nugroho</p>
+                    <p>Membantu administrasi dan korespondensi OSIS</p>
+                </div>
+                <div class="structure-card">
+                    <div class="structure-icon dokumentasi">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <h3>Dokumentasi</h3>
+                    <p>Rina Amelia</p>
+                    <p>Mendokumentasikan seluruh kegiatan OSIS</p>
+                </div>
+                <div class="structure-card">
+                    <div class="structure-icon olahraga">
+                        <i class="fas fa-running"></i>
+                    </div>
+                    <h3>Olahraga</h3>
+                    <p>Andi Saputra</p>
+                    <p>Mengkoordinir kegiatan olahraga sekolah</p>
+                </div>
+                <div class="structure-card">
+                    <div class="structure-icon kesehatan">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3>Kesehatan</h3>
+                    <p>Nurul Hikmah</p>
+                    <p>Mengurus program kesehatan di sekolah</p>
+                </div>
+                <div class="structure-card">
+                    <div class="structure-icon kebersihan">
+                        <i class="fas fa-broom"></i>
+                    </div>
+                    <h3>Kebersihan</h3>
+                    <p>Siti Aisyah</p>
+                    <p>Mengawasi kebersihan lingkungan sekolah</p>
+                </div>
+                <div class="structure-card">
+                    <div class="structure-icon kerapian">
+                        <i class="fas fa-tshirt"></i>
+                    </div>
+                    <h3>Kerapian</h3>
+                    <p>Dimas Setiawan</p>
+                    <p>Memastikan kerapian seragam dan penampilan siswa</p>
+                </div>
+                <div class="structure-card">
+                    <div class="structure-icon kreatif">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Kreatif</h3>
+                    <p>Lia Amelia</p>
+                    <p>Mengembangkan kegiatan seni dan kreativitas</p>
+                </div>
+                <div class="structure-card">
+                    <div class="structure-icon keagamaan">
+                        <i class="fas fa-pray"></i>
+                    </div>
+                    <h3>Keagamaan</h3>
+                    <p>Ahmad Fauzi</p>
+                    <p>Mengkoordinir kegiatan keagamaan di sekolah</p>
+                </div>
+                <div class="structure-card">
+                    <div class="structure-icon keamanan">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Keamanan</h3>
+                    <p>Budi Santoso</p>
+                    <p>Memastikan keamanan selama kegiatan OSIS</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Halaman Program Kerja -->
+    <section id="program-kerja" class="page-content">
+        <div class="container">
+            <h2 class="page-title">Program Kerja OSIS</h2>
+            <div class="page-grid">
+                <div class="page-card">
+                    <h3>OSIS Goes to Campus</h3>
+                    <p>Kunjungan ke perguruan tinggi untuk memotivasi siswa dalam melanjutkan pendidikan ke jenjang yang lebih tinggi.</p>
+                </div>
+                <div class="page-card">
+                    <h3>Skill Development Workshop</h3>
+                    <p>Workshop pengembangan soft skills dan hard skills untuk mempersiapkan siswa masuk dunia kerja.</p>
+                </div>
+                <div class="page-card">
+                    <h3>Environmental Care Program</h3>
+                    <p>Program peduli lingkungan melalui kegiatan penghijauan dan pengelolaan sampah di sekolah.</p>
+                </div>
+                <div class="page-card">
+                    <h3>Art and Culture Festival</h3>
+                    <p>Festival seni dan budaya untuk mengembangkan bakat seni siswa dan melestarikan budaya lokal.</p>
+                </div>
+                <div class="page-card">
+                    <h3>Sports Championship</h3>
+                    <p>Kompetisi olahraga antar kelas untuk meningkatkan kebugaran dan sportivitas siswa.</p>
+                </div>
+                <div class="page-card">
+                    <h3>Leadership Training</h3>
+                    <p>Pelatihan kepemimpinan untuk calon pengurus OSIS periode berikutnya.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Halaman Galeri -->
+    <section id="galeri" class="page-content">
+        <div class="container">
+            <h2 class="page-title">Galeri Kegiatan OSIS</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <div class="gallery-icon">
+                        <i class="fas fa-expand"></i>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Kegiatan Belajar">
+                    <div class="gallery-overlay">
+                        <h4>Rapat Perencanaan</h4>
+                        <p>Pengurus OSIS sedang merencanakan kegiatan semester</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-icon">
+                        <i class="fas fa-expand"></i>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1546410531-bb4caa6b424d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Praktikum Siswa">
+                    <div class="gallery-overlay">
+                        <h4>Workshop Leadership</h4>
+                        <p>Pelatihan kepemimpinan untuk pengurus OSIS</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-icon">
+                        <i class="fas fa-expand"></i>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Ekstrakurikuler">
+                    <div class="gallery-overlay">
+                        <h4>Pentas Seni</h4>
+                        <p>Penampilan siswa dalam acara pentas seni tahunan</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-icon">
+                        <i class="fas fa-expand"></i>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Upacara Bendera">
+                    <div class="gallery-overlay">
+                        <h4>Upacara Bendera</h4>
+                        <p>Pengurus OSIS memimpin upacara bendera hari Senin</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-icon">
+                        <i class="fas fa-expand"></i>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1541336032412-2048a678540d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Kegiatan Olahraga">
+                    <div class="gallery-overlay">
+                        <h4>Turnamen Olahraga</h4>
+                        <p>Kompetisi futsal antar kelas yang diselenggarakan OSIS</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-icon">
+                        <i class="fas fa-expand"></i>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Kegiatan Seni">
+                    <div class="gallery-overlay">
+                        <h4>Pameran Karya</h4>
+                        <p>Pameran karya seni dan produk kreatif siswa</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Halaman Kotak Saran -->
+    <section id="kotak-saran" class="page-content">
+        <div class="container">
+            <h2 class="page-title">Kotak Saran OSIS</h2>
+            <div class="saran-container">
+                <p style="text-align: center; margin-bottom: 2rem; color: #64748b;">
+                    Sampaikan saran, kritik, atau masukan Anda untuk kemajuan OSIS SMKN 1 BANDAR. Setiap saran sangat berarti bagi kami.
+                </p>
+                
+                <form id="saranForm" class="saran-form">
+                    <div class="form-group">
+                        <label for="nama">Nama <span style="color: #ef4444;">*</span></label>
+                        <input type="text" id="nama" name="nama" required placeholder="Masukkan nama Anda">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Masukkan email Anda (opsional)">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="kategori">Kategori Saran <span style="color: #ef4444;">*</span></label>
+                        <select id="kategori" name="kategori" required>
+                            <option value="">Pilih kategori</option>
+                            <option value="Program Kerja">Program Kerja</option>
+                            <option value="Kegiatan OSIS">Kegiatan OSIS</option>
+                            <option value="Fasilitas Sekolah">Fasilitas Sekolah</option>
+                            <option value="Administrasi">Administrasi</option>
+                            <option value="Lainnya">Lainnya</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="saran">Saran/Kritik/Masukan <span style="color: #ef4444;">*</span></label>
+                        <textarea id="saran" name="saran" required placeholder="Tuliskan saran, kritik, atau masukan Anda untuk OSIS SMKN 1 BANDAR..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn-submit">
+                        <i class="fas fa-paper-plane"></i> Kirim Saran
+                    </button>
+                </form>
+                
+                <div id="successMessage" class="success-message">
+                    <i class="fas fa-check-circle"></i> Terima kasih! Saran Anda telah berhasil dikirim.
+                </div>
+            </div>
+            
+            <div class="saran-list" id="daftarSaran">
+                <!-- Daftar saran akan dimuat di sini -->
+            </div>
+        </div>
+    </section>
+    
+    <!-- Halaman Kontak -->
+    <section id="kontak" class="page-content">
+        <div class="container">
+            <h2 class="page-title">Kontak OSIS</h2>
+            <div class="contact-info">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Alamat Sekolah</h3>
+                    <p>Jl. Pendidikan No. 123, Bandar</p>
+                    <p>Kota Bandar, 12345</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>Telepon</h3>
+                    <p>(021) 1234-5678</p>
+                    <p>Ext. 105 (OSIS Room)</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email OSIS</h3>
+                    <p>osis@smkn1bandar.sch.id</p>
+                    <p>info@osissmkn1bandar.com</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Halaman Sosial Media -->
+    <section id="sosial-media" class="page-content">
+        <div class="container">
+            <h2 class="page-title">Sosial Media OSIS</h2>
+            <div class="page-grid">
+                <div class="page-card">
+                    <div class="feature-icon">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                    <h3>Instagram</h3>
+                    <p>Follow kami di Instagram untuk update kegiatan terbaru</p>
+                    <p>@osissmkn1bandar</p>
+                    <a href="#" style="color: var(--accent); text-decoration: none;">→ Kunjungi Instagram</a>
+                </div>
+                <div class="page-card">
+                    <div class="feature-icon">
+                        <i class="fab fa-tiktok"></i>
+                    </div>
+                    <h3>TikTok</h3>
+                    <p>Tonton video kegiatan seru OSIS di TikTok</p>
+                    <p>@osis_smkn1bandar</p>
+                    <a href="#" style="color: var(--accent); text-decoration: none;">→ Kunjungi TikTok</a>
+                </div>
+                <div class="page-card">
+                    <div class="feature-icon">
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                    <h3>YouTube</h3>
+                    <p>Subscribe channel YouTube untuk dokumentasi lengkap</p>
+                    <p>OSIS SMKN 1 Bandar</p>
+                    <a href="#" style="color: var(--accent); text-decoration: none;">→ Kunjungi YouTube</a>
+                </div>
+                <div class="page-card">
+                    <div class="feature-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <h3>WhatsApp Group</h3>
+                    <p>Gabung grup WhatsApp untuk informasi cepat</p>
+                    <p>OSIS SMKN 1 Bandar</p>
+                    <a href="#" style="color: var(--accent); text-decoration: none;">→ Gabung Grup</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Halaman Admin Saran -->
+    <section id="admin-saran" class="page-content">
+        <div class="container">
+            <h2 class="page-title">Admin - Kelola Saran</h2>
+            
+            <div class="admin-actions">
+                <button id="exportBtn" class="btn-submit">
+                    <i class="fas fa-download"></i> Export ke CSV
+                </button>
+                <button id="clearAllBtn" class="btn-submit" style="background: #ef4444;">
+                    <i class="fas fa-trash"></i> Hapus Semua Saran
+                </button>
+            </div>
+            
+            <div class="stats" style="margin: 2rem 0;">
+                <div class="stat-item">
+                    <div class="stat-number" id="totalSaran">0</div>
+                    <div>Total Saran</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" id="saranHariIni">0</div>
+                    <div>Saran Hari Ini</div>
+                </div>
+            </div>
+            
+            <div class="saran-list" id="adminSaranList">
+                <!-- Daftar saran untuk admin -->
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <p>OSIS SMKN 1 BANDAR - Jl. Pendidikan No. 123, Bandar</p>
+            <div class="social-media">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            <div class="footer-links">
+                <a href="#" class="nav-link" data-page="beranda">Beranda</a>
+                <a href="#" class="nav-link" data-page="struktur">Struktur</a>
+                <a href="#" class="nav-link" data-page="program-kerja">Program Kerja</a>
+                <a href="#" class="nav-link" data-page="galeri">Galeri Kegiatan</a>
+                <a href="#" class="nav-link" data-page="kotak-saran">Kotak Saran</a>
+                <a href="#" class="nav-link" data-page="kontak">Kontak</a>
+                <a href="#" class="nav-link" data-page="sosial-media">Sosial Media</a>
+            </div>
+            <p>&copy; 2023 OSIS SMKN 1 BANDAR - osissmkn1bandar.com. Semua Hak Dilindungi.</p>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript untuk navigasi antar halaman
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('.nav-link');
+            const pages = document.querySelectorAll('.page-content');
+            
+            // Fungsi untuk menampilkan halaman yang dipilih
+            function showPage(pageId) {
+                // Sembunyikan semua halaman
+                pages.forEach(page => {
+                    page.classList.remove('page-active');
+                });
+                
+                // Tampilkan halaman yang dipilih
+                const activePage = document.getElementById(pageId);
+                if (activePage) {
+                    activePage.classList.add('page-active');
+                }
+                
+                // Jika halaman kotak saran, muat daftar saran
+                if (pageId === 'kotak-saran') {
+                    loadSaran();
+                }
+                
+                // Jika halaman admin saran, muat data admin
+                if (pageId === 'admin-saran') {
+                    loadAdminSaran();
+                }
+                
+                // Scroll ke atas halaman
+                window.scrollTo(0, 0);
+            }
+            
+            // Tambahkan event listener untuk setiap link navigasi
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const pageId = this.getAttribute('data-page');
+                    showPage(pageId);
+                });
+            });
+            
+            // Tampilkan halaman beranda secara default
+            showPage('beranda');
+            
+            // Fungsi untuk database saran (menggunakan localStorage)
+            function getSaranFromStorage() {
+                const saran = localStorage.getItem('saran_smkn1bandar');
+                return saran ? JSON.parse(saran) : [];
+            }
+            
+            function saveSaranToStorage(saran) {
+                localStorage.setItem('saran_smkn1bandar', JSON.stringify(saran));
+            }
+            
+            // Fungsi untuk menambah saran baru
+            function addSaran(nama, email, kategori, saran) {
+                const saranList = getSaranFromStorage();
+                const newSaran = {
+                    id: Date.now(),
+                    nama: nama,
+                    email: email || 'Tidak diisi',
+                    kategori: kategori,
+                    saran: saran,
+                    tanggal: new Date().toLocaleDateString('id-ID', {
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric',
+                        hour: '2-digit',
+                        minute: '2-digit'
+                    })
+                };
+                
+                saranList.unshift(newSaran);
+                saveSaranToStorage(saranList);
+                return newSaran;
+            }
+            
+            // Fungsi untuk memuat dan menampilkan daftar saran
+            function loadSaran() {
+                const saranList = getSaranFromStorage();
+                const daftarSaran = document.getElementById('daftarSaran');
+                
+                if (saranList.length === 0) {
+                    daftarSaran.innerHTML = `
+                        <div class="empty-state">
+                            <i class="fas fa-inbox"></i>
+                            <h3>Belum ada saran</h3>
+                            <p>Jadilah yang pertama memberikan saran untuk OSIS SMKN 1 BANDAR</p>
+                        </div>
+                    `;
+                    return;
+                }
+                
+                daftarSaran.innerHTML = `
+                    <h3 class="section-title">Daftar Saran Terbaru</h3>
+                    ${saranList.map(item => `
+                        <div class="saran-item">
+                            <div class="saran-header">
+                                <div>
+                                    <span class="saran-nama">${item.nama}</span>
+                                    <span class="saran-kategori">${item.kategori}</span>
+                                </div>
+                                <span class="saran-tanggal">${item.tanggal}</span>
+                            </div>
+                            <div class="saran-isi">${item.saran}</div>
+                        </div>
+                    `).join('')}
+                `;
+            }
+            
+            // Event listener untuk form saran
+            const saranForm = document.getElementById('saranForm');
+            const successMessage = document.getElementById('successMessage');
+            
+            if (saranForm) {
+                saranForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    const nama = document.getElementById('nama').value;
+                    const email = document.getElementById('email').value;
+                    const kategori = document.getElementById('kategori').value;
+                    const saran = document.getElementById('saran').value;
+                    
+                    // Tambahkan saran ke database
+                    addSaran(nama, email, kategori, saran);
+                    
+                    // Tampilkan pesan sukses
+                    successMessage.style.display = 'block';
+                    
+                    // Reset form
+                    saranForm.reset();
+                    
+                    // Muat ulang daftar saran
+                    loadSaran();
+                    
+                    // Sembunyikan pesan sukses setelah 5 detik
+                    setTimeout(() => {
+                        successMessage.style.display = 'none';
+                    }, 5000);
+                });
+            }
+            
+            // Fungsi untuk admin panel
+            function loadAdminSaran() {
+                const saranList = getSaranFromStorage();
+                const adminSaranList = document.getElementById('adminSaranList');
+                const totalSaran = document.getElementById('totalSaran');
+                const saranHariIni = document.getElementById('saranHariIni');
+                
+                // Hitung statistik
+                totalSaran.textContent = saranList.length;
+                
+                const today = new Date().toLocaleDateString('id-ID');
+                const saranToday = saranList.filter(item => 
+                    item.tanggal.includes(today.split('/')[0])
+                ).length;
+                saranHariIni.textContent = saranToday;
+                
+                if (saranList.length === 0) {
+                    adminSaranList.innerHTML = `
+                        <div class="empty-state">
+                            <i class="fas fa-inbox"></i>
+                            <h3>Belum ada saran</h3>
+                            <p>Tidak ada saran yang perlu dikelola</p>
+                        </div>
+                    `;
+                    return;
+                }
+                
+                adminSaranList.innerHTML = saranList.map(item => `
+                    <div class="saran-item admin">
+                        <button class="delete-btn" onclick="deleteSaran(${item.id})">
+                            <i class="fas fa-trash"></i> Hapus
+                        </button>
+                        <div class="saran-header">
+                            <div>
+                                <span class="saran-nama">${item.nama}</span>
+                                <span class="saran-kategori">${item.kategori}</span>
+                            </div>
+                            <span class="saran-tanggal">${item.tanggal}</span>
+                        </div>
+                        <div class="saran-email">Email: ${item.email}</div>
+                        <div class="saran-isi">${item.saran}</div>
+                    </div>
+                `).join('');
+            }
+            
+            // Fungsi hapus saran
+            window.deleteSaran = function(id) {
+                if (confirm('Apakah Anda yakin ingin menghapus saran ini?')) {
+                    const saranList = getSaranFromStorage();
+                    const updatedList = saranList.filter(item => item.id !== id);
+                    saveSaranToStorage(updatedList);
+                    loadAdminSaran();
+                }
+            }
+            
+            // Fungsi export ke CSV
+            function exportToCSV() {
+                const saranList = getSaranFromStorage();
+                
+                if (saranList.length === 0) {
+                    alert('Tidak ada data saran untuk diexport');
+                    return;
+                }
+                
+                // Header CSV
+                let csv = 'Nama,Email,Kategori,Tanggal,Saran\n';
+                
+                // Data
+                saranList.forEach(item => {
+                    const row = [
+                        `"${item.nama.replace(/"/g, '""')}"`,
+                        `"${item.email.replace(/"/g, '""')}"`,
+                        `"${item.kategori.replace(/"/g, '""')}"`,
+                        `"${item.tanggal.replace(/"/g, '""')}"`,
+                        `"${item.saran.replace(/"/g, '""')}"`
+                    ].join(',');
+                    csv += row + '\n';
+                });
+                
+                // Buat dan download file
+                const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+                const link = document.createElement('a');
+                const url = URL.createObjectURL(blob);
+                link.setAttribute('href', url);
+                link.setAttribute('download', `saran_osissmkn1bandar_${new Date().toISOString().split('T')[0]}.csv`);
+                link.style.visibility = 'hidden';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            }
+            
+            // Fungsi hapus semua saran
+            function clearAllSaran() {
+                if (confirm('Apakah Anda yakin ingin menghapus SEMUA saran? Tindakan ini tidak dapat dibatalkan!')) {
+                    localStorage.removeItem('saran_smkn1bandar');
+                    loadAdminSaran();
+                    alert('Semua saran telah dihapus');
+                }
+            }
+            
+            // Event listeners untuk admin
+            const exportBtn = document.getElementById('exportBtn');
+            const clearAllBtn = document.getElementById('clearAllBtn');
+            
+            if (exportBtn) {
+                exportBtn.addEventListener('click', exportToCSV);
+            }
+            
+            if (clearAllBtn) {
+                clearAllBtn.addEventListener('click', clearAllSaran);
+            }
+        });
+    </script>
+</body>
+</html>
